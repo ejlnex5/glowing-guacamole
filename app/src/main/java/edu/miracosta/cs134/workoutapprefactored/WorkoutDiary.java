@@ -1,5 +1,7 @@
 package edu.miracosta.cs134.workoutapprefactored;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -22,7 +24,13 @@ public class WorkoutDiary extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_search:
-                    //code goes here
+                    // Search fragment
+                    FragmentManager fM = getFragmentManager();
+                    FragmentTransaction fT = fM.beginTransaction();
+                    SearchFragment f = new SearchFragment();
+                    fT.add(R.id.searchFragment_container, f);
+                    fT.addToBackStack(null);
+                    fT.commit();
                     return true;
                 case R.id.navigation_view_stats:
                     //todo

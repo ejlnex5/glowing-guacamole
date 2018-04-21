@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WorkoutAppRefactored.iml" filepath="$PROJECT_DIR$/WorkoutAppRefactored.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WorkoutAppR.iml" filepath="$PROJECT_DIR$/WorkoutAppR.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

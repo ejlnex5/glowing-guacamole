@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.miracosta.cs134.workoutapprefactored.SearchFragment"
+    android:id="@+id/searchFragment_container"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:isScrollContainer="true"
+        android:onClick="@android:string/search_go" >
+    </SearchView>
+
+</LinearLayout>
