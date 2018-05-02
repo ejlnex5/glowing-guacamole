@@ -20,6 +20,9 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.android.gms:play-services-fitness:11.6.0'
+    implementation 'com.google.android.gms:play-services-auth:11.6.0'
+    //509979793282-ot0gfaqc76utefac6a62noen4r85ohi4.apps.googleusercontent.com
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
