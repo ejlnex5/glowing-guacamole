@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 package="edu.miracosta.cs134.workoutapprefactored">
+    <!--Allows app to use Bluetooth LE-->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +16,7 @@ package="edu.miracosta.cs134.workoutapprefactored">
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".NewUserEntry"
+            android:name=".SplashActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +24,23 @@ package="edu.miracosta.cs134.workoutapprefactored">
             </intent-filter>
         </activity>
         <activity
+            android:name=".NewUserEntry"
+            android:label="WorkoutApp"
+            android:parentActivityName=".SplashActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.miracosta.cs134.workoutapprefactored.SplashActivity"
+                />
+        </activity>
+        <activity
             android:name=".WorkoutDiary"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".NewUserEntry"/>
+            android:parentActivityName=".NewUserEntry">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.miracosta.cs134.workoutapprefactored.NewUserEntry"
                 />
+        </activity>
     </application>
 </manifest>
