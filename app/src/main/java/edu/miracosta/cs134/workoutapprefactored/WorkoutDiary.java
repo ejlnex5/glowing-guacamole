@@ -19,36 +19,32 @@ import android.view.View;
 public class WorkoutDiary extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-    {
-        mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_search:
-                        // Search fragment
-                        FragmentManager fM = getFragmentManager();
-                        FragmentTransaction fT = fM.beginTransaction();
-                        SearchFragment f = new SearchFragment();
-                        fT.add(R.id.searchFragment_container, f);
-                        fT.addToBackStack(null);
-                        fT.commit();
-                        return true;
-                    case R.id.navigation_view_stats:
-                        //todo
-                        return true;
-                    case R.id.navigation_add_routine:
-                        //todo
-                        Intent toMenu = new Intent(this, RecordWorkout.class);
-                        startActivity(toMenu);
-                        return true;
-                }
-                return false;
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_search:
+                    // Search fragment
+                    FragmentManager fM = getFragmentManager();
+                    FragmentTransaction fT = fM.beginTransaction();
+                    SearchFragment f = new SearchFragment();
+                    fT.add(R.id.searchFragment_container, f);
+                    fT.addToBackStack(null);
+                    fT.commit();
+                    return true;
+                case R.id.navigation_view_stats:
+                    //todo
+                    return true;
+                case R.id.navigation_add_routine:
+                    //todo
+                    Intent toMenu = new Intent(WorkoutDiary.this, RecordWorkout.class);
+                    startActivity(toMenu);
+                    return true;
             }
-        };
-    }
+            return false;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,5 +111,10 @@ public class WorkoutDiary extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void navigateToRecordWorkout(MenuItem item) {
+        Intent toMenu = new Intent(this, RecordWorkout.class);
+        startActivity(toMenu);
     }
 }

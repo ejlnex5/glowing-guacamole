@@ -19,7 +19,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:onClick="navigateToMenu"
         app:headerLayout="@layout/nav_header_workout_diary"
         app:menu="@menu/activity_workout_diary_drawer" />
 

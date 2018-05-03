@@ -15,6 +15,7 @@
     <item
         android:title="@string/title_add_routine"
         android:icon="@drawable/ic_add_black_24dp"
-        android:id="@+id/navigation_add_routine"/>
+        android:id="@+id/navigation_add_routine"
+        android:onClick="navigateToRecordWorkout"/>
 
 </menu>
