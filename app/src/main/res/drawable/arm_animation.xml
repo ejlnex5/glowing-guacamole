@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/frame_00_delay_018s" android:duration="200" />
+    <item android:drawable="@drawable/frame_01_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_02_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_03_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_04_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_05_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_06_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_07_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_08_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_09_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_10_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_11_delay_006s" android:duration="70" />
+    <item android:drawable="@drawable/frame_12_delay_006s" android:duration="70" />
+</animation-list>
+
