@@ -15,9 +15,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class WorkoutDiary extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -61,6 +70,30 @@ public class WorkoutDiary extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+        // Workout diary entries
+        ArrayList<DiaryEntry> diaryEntries = new ArrayList<DiaryEntry>();
+        diaryEntries.add(new DiaryEntry("100 Push-ups", "Do 100 push-ups.", "Easy"));
+        diaryEntries.add(new DiaryEntry("100 Sit-ups", "Do 100 sit-ups.", "Moderate"));
+        diaryEntries.add(new DiaryEntry("10k", "Run 10 kilometers.", "Moderate"));
+
+        ListAdapter routineAdapter = new ArrayAdapter<DiaryEntry>(this, android.R.layout.simple_list_item_1, diaryEntries);
+        ListView diaryListView = (ListView) findViewById(R.id.diary_list_view);
+        diaryListView.setAdapter(routineAdapter);
+
+        TextView entryDisplayText = (TextView) findViewById(R.id.entry_display_text);
+        diaryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+             @Override
+             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                 DiaryEntry entry = (DiaryEntry) parent.getItemAtPosition(position);
+                 //entryDisplayText.setText(entry.displayEntry());
+
+                 Toast.makeText(WorkoutDiary.this, "JUST DO IT", Toast.LENGTH_LONG).show();
+             }
+         });
     }
 
     @Override
