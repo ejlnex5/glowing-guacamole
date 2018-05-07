@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "edu.miracosta.cs134.workoutapprefactored"
@@ -26,7 +28,7 @@ android {
 
 dependencies {
     implementation 'com.google.android.gms:play-services-fitness:15.0.0'
-    implementation 'com.google.android.gms:play-services-auth:15.0.0'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
     //509979793282-ot0gfaqc76utefac6a62noen4r85ohi4.apps.googleusercontent.com
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
