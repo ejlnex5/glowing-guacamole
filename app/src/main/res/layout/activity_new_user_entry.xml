@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonUserEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -38,82 +38,42 @@
             android:elevation="8dp"
             android:text="@string/create_account"
             android:visibility="visible"
-            android:onClick="navigateToMenu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="7dp"
-            android:ems="10"
-            android:hint="@string/new_user"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/email"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/newusername"
+            tools:ignore="RtlCompat" />
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/newemail"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             android:ems="10"
             android:hint="@string/enter_email"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/confirmemail"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/newpassword"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/confirmemail"
+            android:id="@+id/newpassword"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:ems="10"
-            android:hint="@string/confirm_email"
-            android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             android:ems="10"
             android:hint="@string/enter_password"
-            android:inputType="numberPassword"
-            app:layout_constraintBottom_toTopOf="@+id/confirmpassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/newusername"
+            app:layout_constraintTop_toBottomOf="@+id/newemail" />
 
         <EditText
-            android:id="@+id/confirmpassword"
+            android:id="@+id/newusername"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             android:ems="10"
-            android:hint="@string/confirm_password"
-            android:inputType="numberPassword"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:hint="@string/new_user"
+            android:inputType="textAutoComplete"
+            app:layout_constraintBottom_toTopOf="@+id/buttonUserEntry"
+            app:layout_constraintTop_toBottomOf="@+id/newpassword" />
 
     </android.support.constraint.ConstraintLayout>
 
