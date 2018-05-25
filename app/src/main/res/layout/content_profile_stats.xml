@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--Radar-chart provided by a 3rd-party MIT licensed API. See directory-->
     <com.ultramegasoft.radarchart.RadarView
         android:id="@+id/radar"
-        android:layout_width="329dp"
-        android:layout_height="340dp"
+        android:layout_width="327dp"
+        android:layout_height="331dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
