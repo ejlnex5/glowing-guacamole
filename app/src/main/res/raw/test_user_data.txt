@@ -1,0 +1,8 @@
+pushups,1,20
+pushups,2,20
+pushups,3,30
+pushups,4,30
+pullups,1,10
+pullups,2,8
+pullups,3,6
+run,,,18.3,3.7

@@ -28,7 +28,7 @@ public class WorkoutDiary extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener(){
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -43,7 +43,9 @@ public class WorkoutDiary extends AppCompatActivity
                     fT.commit();
                     return true;
                 case R.id.navigation_view_stats:
-                    //todo
+                    // Go to profile stats
+                    Intent toStats = new Intent(WorkoutDiary.this, ProfileStatsActivity.class);
+                    startActivity(toStats);
                     return true;
                 case R.id.navigation_add_routine:
                     //todo
@@ -148,6 +150,11 @@ public class WorkoutDiary extends AppCompatActivity
 
     public void navigateToRecordWorkout(MenuItem item) {
         Intent toMenu = new Intent(this, RecordWorkout.class);
+        startActivity(toMenu);
+    }
+
+    public void navigateToProfileStats(MenuItem item) {
+        Intent toMenu = new Intent(this, ProfileStatsActivity.class);
         startActivity(toMenu);
     }
 }

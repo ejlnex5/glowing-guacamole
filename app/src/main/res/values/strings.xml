@@ -70,4 +70,19 @@
     <string name="createNewUser">Create New User</string>
     <string name="or">-Or-</string>
 
+    <!--String array of exercise names to test spinner in Profile Stats Activity-->
+    <string name="exercise_prompt">Choose an exercise</string>
+
+    <string-array name="exercise_array">
+        <item>Push-ups</item>
+        <item>Sit-ups</item>
+        <item>Pull-ups</item>
+        <item>Run</item>
+        <item>Cycling</item>
+        <item>Swim</item>
+        <item>Bench Press</item>
+        <item>Squats</item>
+        <item>Bbell Bicep Curls</item>
+    </string-array>
+
 </resources>
