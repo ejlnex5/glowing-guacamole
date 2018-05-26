@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class SplashActivity extends AppCompatActivity {
-    private static final int SPLASH_DELAY = 5000;
+    private static final int SPLASH_DELAY = 3100;
     private ImageView img;
 
     @Override
@@ -27,7 +27,6 @@ public class SplashActivity extends AppCompatActivity {
         AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
         // Start the animation (looped playback by default).
         frameAnimation.start();
-
 
         new Handler().postDelayed(new Runnable() {
             @Override

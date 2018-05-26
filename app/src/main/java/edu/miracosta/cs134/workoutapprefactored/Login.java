@@ -111,8 +111,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         Intent navi = new Intent(this, WorkoutDiary.class);
         startActivity(navi);
     }
-
 */
+
     public void navigateToNewUserEntry(View view) {
         Intent navi = new Intent(this,NewUserEntry.class);
         startActivity(navi);

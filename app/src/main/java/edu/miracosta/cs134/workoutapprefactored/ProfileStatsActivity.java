@@ -13,9 +13,28 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
+
+import com.ultramegasoft.radarchart.RadarHolder;
+import com.ultramegasoft.radarchart.RadarView;
+
+import java.util.ArrayList;
 
 public class ProfileStatsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    private RadarView mRadarView;
+    private ProgressBar mProgressBar;
+
+    private ArrayList<RadarHolder> mData = new ArrayList<RadarHolder>() {
+        {
+            add(new RadarHolder("Endurance", 4));
+            add(new RadarHolder("Strength", 2));
+            add(new RadarHolder("Dexterity", 3));
+            add(new RadarHolder("Flexibility", 5));
+            add(new RadarHolder("Balance", 4));
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +48,14 @@ public class ProfileStatsActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        // Find the views in the layout.
+        mRadarView = findViewById(R.id.radar);
+        mProgressBar = findViewById(R.id.progressBar);
+
+        // Set the data for the RadarView to display.
+        mRadarView.setData(mData);
+        mProgressBar.setProgress(67);
     }
 
     @Override
